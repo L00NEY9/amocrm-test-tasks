@@ -1,0 +1,24 @@
+@use "../../../styles/variables";
+
+
+.container {
+  margin-right: 52px;
+
+  > img {
+    width: 140px;
+    height: 24px;
+  }
+
+  > p {
+    width: 165px;
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  @media(max-width: variables.$collapseWidth) {
+    display: none;
+  }
+}

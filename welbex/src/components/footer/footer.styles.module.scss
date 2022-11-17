@@ -1,0 +1,24 @@
+@use "../../styles/variables";
+
+.container {
+  margin-top: 69px;
+  padding-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 1;
+
+  @media(max-width: variables.$collapseWidth) {
+    background: variables.$background;
+    margin-top: 59px;
+    padding: 35px 15px;
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    * {
+      text-align: left !important;
+    }
+  }
+}

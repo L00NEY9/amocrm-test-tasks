@@ -1,0 +1,195 @@
+@use "../../styles/variables";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  z-index: 1;
+
+  @media(max-width: variables.$collapseWidth) {
+    padding: 0 15px;
+  }
+}
+
+.heading {
+  max-width: 362px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  margin: 0;
+
+  @media (max-width: variables.$collapseWidth) {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.companyTitle {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  margin: 0;
+
+  background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 82.36%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.description {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  max-width: 275px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.rightSide {
+  h2 {
+    max-width: 291px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: auto;
+    text-align: right;
+
+    > span {
+      background: linear-gradient(45deg, #FCB045 0%, #FD1D1D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      font-weight: 900;
+      text-transform: uppercase;
+
+      &:last-child {
+        background: linear-gradient(45deg, #FCB045 0%, #FC6F33 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  @media(max-width: variables.$collapseWidth) {
+    * {
+      text-align: left !important;
+    }
+
+    h2 span {
+      text-transform: unset;
+    }
+
+    .gifts {
+      align-items: start;
+      > div {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .giftHeading {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+
+      &:before {
+        content: "";
+        height: 1px;
+        width: 10px;
+        display: inline-block;
+        margin-right: 5px;
+        background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);;
+      }
+    }
+
+    .giftDescription {
+      display: none;
+    }
+
+    .consultationButton {
+      display: none;
+    }
+  }
+}
+
+.giftsWrapper {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.gifts {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  > div:first-child {
+    margin-bottom: 30px;
+  }
+}
+
+.giftHeading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  margin-bottom: 6px;
+}
+
+.giftDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;text-align: right;
+}
+
+.consultationButton {
+  width: 262px;
+  height: 61px;
+  margin-top: 61px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  background: #4077F3;
+  color: variables.$text;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.glass {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: radial-gradient(238.53% 189.02% at 3.2% 3.49%, rgba(255, 247, 237, 0.1) 0%, rgba(26, 29, 35, 0.1) 26.62%, rgba(26, 29, 35, 0.1) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  backdrop-filter: blur(7.5px);
+  z-index: -1;
+
+  @media(max-width: variables.$collapseWidth) {
+    display: block;
+  }
+}

@@ -1,0 +1,34 @@
+@use "../../../styles/variables";
+
+
+.container {
+  display: flex;
+
+  @media(max-width: variables.$contentWidth) {
+    display: none;
+  }
+}
+
+.telephone {
+  font-weight: 500;
+  margin-right: 47px;
+}
+
+.chats {
+  display: flex;
+  margin: 0;
+
+  > a {
+    cursor: pointer;
+    margin-right: 30px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
